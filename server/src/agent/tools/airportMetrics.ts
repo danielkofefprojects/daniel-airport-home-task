@@ -21,6 +21,7 @@ import {
   type ScoreDriver,
   type Tier
 } from "../../scoring/scores.js";
+import { CONGESTION_SCORE_WEIGHTS, OPPORTUNITY_SCORE_WEIGHTS } from "../../config/scoring.js";
 import type { AirportRecord, NasStatusSnapshot } from "../../types.js";
 
 export interface AirportMetrics {
@@ -96,14 +97,14 @@ export function computeMetricsForPeerSet(
     const unmet = unmetDemandIndex(demand, congestion);
 
     const opportunityDrivers = driverBreakdown({
-      demand: { weight: 0.45, percentile: demand },
-      congestion: { weight: 0.4, percentile: congestion },
-      recovery: { weight: 0.15, percentile: rPct }
+      demand: { weight: OPPORTUNITY_SCORE_WEIGHTS.demandScore, percentile: demand },
+      congestion: { weight: OPPORTUNITY_SCORE_WEIGHTS.congestionScore, percentile: congestion },
+      recovery: { weight: OPPORTUNITY_SCORE_WEIGHTS.recoveryRatio, percentile: rPct }
     });
     const unmetDemandDrivers = driverBreakdown({
-      paxPerRunway: { weight: 0.5, percentile: pPct },
-      opsPerRunway: { weight: 0.35, percentile: oPct },
-      delaySignal: { weight: 0.15, percentile: delay * 100 }
+      paxPerRunway: { weight: CONGESTION_SCORE_WEIGHTS.paxPerRunway, percentile: pPct },
+      opsPerRunway: { weight: CONGESTION_SCORE_WEIGHTS.opsPerRunway, percentile: oPct },
+      delaySignal: { weight: CONGESTION_SCORE_WEIGHTS.delaySignal, percentile: delay * 100 }
     });
 
     const stats = context.flightStatsByIata.get(airport.iata);

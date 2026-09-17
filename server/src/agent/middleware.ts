@@ -3,6 +3,18 @@ import { SystemMessage, ToolMessage } from "@langchain/core/messages";
 
 const MAX_HISTORY_MESSAGES = 16;
 
+/**
+ * Finds the latest cut point at or after `minIndex` that doesn't start on a ToolMessage, so a trimmed
+ * window never opens with a tool result whose triggering AIMessage.tool_calls got cut, which Groq rejects.
+ */
+function safeTrimStart(messages: readonly unknown[], minIndex: number): number {
+  let i = minIndex;
+  while (i < messages.length && messages[i] instanceof ToolMessage) {
+    i += 1;
+  }
+  return i;
+}
+
 /** Keeps the system prompt plus the most recent turns so Groq's tight token limits aren't exceeded. */
 export const trimHistoryMiddleware = createMiddleware({
   name: "trimHistoryMiddleware",
@@ -10,7 +22,8 @@ export const trimHistoryMiddleware = createMiddleware({
     if (state.messages.length <= MAX_HISTORY_MESSAGES) {
       return;
     }
-    return { messages: state.messages.slice(-MAX_HISTORY_MESSAGES) };
+    const start = safeTrimStart(state.messages, state.messages.length - MAX_HISTORY_MESSAGES);
+    return { messages: state.messages.slice(start) };
   }
 });
 

@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ChatMessage } from '../models';
 import { ChatService, ChatStreamError } from '../services/chat.service';
+import { VoiceService } from '../services/voice.service';
 import { EvidenceComponent } from './evidence.component';
 import { MarkdownPipe } from './markdown.pipe';
 
@@ -28,6 +29,25 @@ export class ChatComponent {
   readonly quickPicks = QUICK_PICKS;
 
   private readonly chatService = inject(ChatService);
+  private readonly voiceService = inject(VoiceService);
+
+  readonly voiceSupported = this.voiceService.supported;
+  readonly listening = this.voiceService.listening;
+
+  toggleVoice(): void {
+    if (this.listening()) {
+      this.voiceService.stop();
+      return;
+    }
+    this.error.set(null);
+    this.voiceService.start(
+      (transcript) => {
+        this.draft.set(transcript);
+        void this.send();
+      },
+      () => this.error.set('Could not hear you. Please try again or type your question.')
+    );
+  }
 
   async sendQuickPick(text: string): Promise<void> {
     if (this.loading()) return;
