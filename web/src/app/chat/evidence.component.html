@@ -1,0 +1,71 @@
+@if (evidence().length > 0) {
+  <div class="evidence">
+    <button type="button" class="evidence-toggle" (click)="toggle()">
+      <span>{{ expanded() ? '▾' : '▸' }}</span>
+      Evidence ({{ evidence().length }} tool{{ evidence().length === 1 ? '' : 's' }})
+    </button>
+
+    @if (expanded()) {
+      <div class="evidence-body">
+        @for (view of views(); track view.tool) {
+          <section class="evidence-tool">
+            <h4>{{ view.tool }}</h4>
+
+            @if (view.rows.length > 0) {
+              <table class="evidence-table">
+                <thead>
+                  <tr>
+                    <th>Airport</th>
+                    <th>Score</th>
+                    <th>Tier</th>
+                    <th>Confidence</th>
+                    <th>Why (drivers)</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (row of view.rows; track row.label) {
+                    <tr>
+                      <td>{{ row.label }}</td>
+                      <td>{{ row.score !== undefined ? row.score.toFixed(1) : '—' }}</td>
+                      <td>{{ row.tier ?? '—' }}</td>
+                      <td>{{ row.confidence ?? '—' }}</td>
+                      <td>
+                        @if (row.drivers.length > 0) {
+                          @for (driver of row.drivers; track driver.name) {
+                            <span class="evidence-field">{{ driver.name }}: {{ driver.contribution.toFixed(1) }}</span>
+                          }
+                        } @else {
+                          —
+                        }
+                      </td>
+                      <td>
+                        @for (field of row.fields; track field.key) {
+                          <span class="evidence-field">{{ field.key }}: {{ field.value }}</span>
+                        }
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+
+            <div class="evidence-meta">
+              <p class="evidence-asof"><strong>As of:</strong> {{ view.asOf }}</p>
+              @if (view.sources.length > 0) {
+                <p class="evidence-sources"><strong>Sources:</strong> {{ view.sources.join(', ') }}</p>
+              }
+              @if (view.caveats.length > 0) {
+                <ul class="evidence-caveats">
+                  @for (caveat of view.caveats; track caveat) {
+                    <li>{{ caveat }}</li>
+                  }
+                </ul>
+              }
+            </div>
+          </section>
+        }
+      </div>
+    }
+  </div>
+}

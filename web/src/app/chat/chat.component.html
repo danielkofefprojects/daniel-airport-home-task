@@ -1,0 +1,71 @@
+<div class="chat">
+  <div class="messages">
+    @if (messages().length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">✈</div>
+        <h2>Where should the next investment go?</h2>
+        <p>Ask about demand pressure, congestion, flight mix, or compare airports head-to-head.</p>
+
+        <div class="quick-picks">
+          @for (pick of quickPicks; track pick) {
+            <button type="button" class="quick-pick" [disabled]="loading()" (click)="sendQuickPick(pick)">
+              {{ pick }}
+            </button>
+          }
+        </div>
+      </div>
+    }
+
+    @for (message of messages(); track $index) {
+      <div class="message" [class.message-user]="message.role === 'user'" [class.message-agent]="message.role === 'agent'">
+        @if (message.role === 'agent') {
+          <div class="avatar avatar-agent">✈</div>
+        }
+        <div class="bubble">
+          @if (message.role === 'agent') {
+            <div class="markdown" [innerHTML]="message.text | markdown"></div>
+          } @else {
+            <p>{{ message.text }}</p>
+          }
+          <span class="cursor" [hidden]="!(streaming() && $last && message.role === 'agent')"></span>
+          @if (message.evidence && message.evidence.length > 0) {
+            <app-evidence [evidence]="message.evidence" />
+          }
+        </div>
+      </div>
+    }
+
+    @if (loading()) {
+      <div class="message message-agent">
+        <div class="avatar avatar-agent">✈</div>
+        <div class="bubble bubble-loading">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+    }
+  </div>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  <form class="composer" (submit)="onEnter($event)">
+    <input
+      type="text"
+      name="message"
+      placeholder="Ask about airport investment opportunities…"
+      [ngModel]="draft()"
+      (ngModelChange)="draft.set($event)"
+      [disabled]="loading()"
+      autocomplete="off"
+    />
+    <button type="submit" class="send-btn" [disabled]="loading() || !draft().trim()" aria-label="Send">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </form>
+</div>

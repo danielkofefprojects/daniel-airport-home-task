@@ -1,0 +1,23 @@
+{
+  "name": "airport-agent",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"npm run dev -w server\" \"npm run start -w web\"",
+    "test": "npm run test -w server",
+    "seed": "npm run seed -w server",
+    "tool": "npm run tool -w server --",
+    "lint": "npm run lint -w server && npm run lint -w web",
+    "build": "npm run build -w server && npm run build -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

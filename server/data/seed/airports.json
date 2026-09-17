@@ -1,0 +1,2154 @@
+{
+  "generatedAt": "2026-09-17T13:02:03.024Z",
+  "sources": [
+    "https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv",
+    "https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/runways.csv",
+    "https://www.faa.gov/airports/planning_capacity/passenger_allcargo_stats/passenger/ARP-cy2024-all-enplanements.xlsx",
+    "https://www.faa.gov/sites/faa.gov/files/airports/planning_capacity/passenger_allcargo_stats/passenger/cy19-all-enplanements.xlsx"
+  ],
+  "airports": [
+    {
+      "iata": "ABQ",
+      "icao": "KABQ",
+      "name": "Albuquerque International Sunport",
+      "city": "Albuquerque",
+      "state": "NM",
+      "latitude": 35.039976,
+      "longitude": -106.608925,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 10000,
+          "surface": "CONC-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 13793,
+          "surface": "CONC-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 6000,
+          "surface": "CONC-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "ASPH-CONC-F",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 2641450,
+        "2024": 2690218
+      }
+    },
+    {
+      "iata": "ANC",
+      "icao": "PANC",
+      "name": "Ted Stevens Anchorage International Airport",
+      "city": "Anchorage",
+      "state": "AK",
+      "latitude": 61.179004,
+      "longitude": -149.992561,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 10600,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 12400,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10865,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2713843,
+        "2024": 2767856
+      }
+    },
+    {
+      "iata": "ATL",
+      "icao": "KATL",
+      "name": "Hartsfield Jackson Atlanta International Airport",
+      "city": "Atlanta",
+      "state": "GA",
+      "latitude": 33.6367,
+      "longitude": -84.428101,
+      "hubSize": "L",
+      "activeRunwayCount": 5,
+      "runways": [
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9999,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12390,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 53505795,
+        "2024": 52511402
+      }
+    },
+    {
+      "iata": "AUS",
+      "icao": "KAUS",
+      "name": "Austin Bergstrom International Airport",
+      "city": "Austin",
+      "state": "TX",
+      "latitude": 30.197535,
+      "longitude": -97.662015,
+      "hubSize": "L",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12250,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 8507410,
+        "2024": 10678073
+      }
+    },
+    {
+      "iata": "BDL",
+      "icao": "KBDL",
+      "name": "Bradley International Airport",
+      "city": "Hartford",
+      "state": "CT",
+      "latitude": 41.938555,
+      "longitude": -72.688016,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 9510,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 5145,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 6847,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 3323614,
+        "2024": 3285194
+      }
+    },
+    {
+      "iata": "BNA",
+      "icao": "KBNA",
+      "name": "Nashville International Airport",
+      "city": "Nashville",
+      "state": "TN",
+      "latitude": 36.1245,
+      "longitude": -86.6782,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 8001,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7704,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8001,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11030,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 8935654,
+        "2024": 12058688
+      }
+    },
+    {
+      "iata": "BOI",
+      "icao": "KBOI",
+      "name": "Boise Air Terminal/Gowen Field",
+      "city": "Boise",
+      "state": "ID",
+      "latitude": 43.5644,
+      "longitude": -116.223,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 5000,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9763,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2057750,
+        "2024": 2475370
+      }
+    },
+    {
+      "iata": "BOS",
+      "icao": "KBOS",
+      "name": "Boston Logan International Airport",
+      "city": "Boston",
+      "state": "MA",
+      "latitude": 42.36197,
+      "longitude": -71.0079,
+      "hubSize": "L",
+      "activeRunwayCount": 6,
+      "runways": [
+        {
+          "lengthFt": 7864,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10006,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 7001,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 5000,
+          "surface": "ASPH-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 2557,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10083,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 20699377,
+        "2024": 21090721
+      }
+    },
+    {
+      "iata": "BUF",
+      "icao": "KBUF",
+      "name": "Buffalo Niagara International Airport",
+      "city": "Buffalo",
+      "state": "NY",
+      "latitude": 42.940498,
+      "longitude": -78.732201,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 8829,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 7161,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2459199,
+        "2024": 2499295
+      }
+    },
+    {
+      "iata": "BUR",
+      "icao": "KBUR",
+      "name": "Hollywood Burbank/Bob Hope Airport",
+      "city": "Burbank",
+      "state": "CA",
+      "latitude": 34.202834,
+      "longitude": -118.35805,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 5802,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6886,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2988720,
+        "2024": 3383237
+      }
+    },
+    {
+      "iata": "BWI",
+      "icao": "KBWI",
+      "name": "Baltimore/Washington International Thurgood Marshall Airport",
+      "city": "Baltimore",
+      "state": "MD",
+      "latitude": 39.1754,
+      "longitude": -76.668297,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 6000,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 10503,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 5000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9501,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 13284687,
+        "2024": 13221461
+      }
+    },
+    {
+      "iata": "CHS",
+      "icao": "KCHS",
+      "name": "Charleston International Airport",
+      "city": "Charleston",
+      "state": "SC",
+      "latitude": 32.896159,
+      "longitude": -80.038151,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 7000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9001,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2375868,
+        "2024": 3115194
+      }
+    },
+    {
+      "iata": "CLE",
+      "icao": "KCLE",
+      "name": "Cleveland Hopkins International Airport",
+      "city": "Cleveland",
+      "state": "OH",
+      "latitude": 41.411701,
+      "longitude": -81.8498,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 7096,
+          "surface": "CON",
+          "closed": true
+        },
+        {
+          "lengthFt": 6018,
+          "surface": "concrete",
+          "closed": false
+        },
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9953,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 4894541,
+        "2024": 4950345
+      }
+    },
+    {
+      "iata": "CLT",
+      "icao": "KCLT",
+      "name": "Charlotte Douglas International Airport",
+      "city": "Charlotte",
+      "state": "NC",
+      "latitude": 35.2140007019043,
+      "longitude": -80.94309997558594,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 7502,
+          "surface": "PEM",
+          "closed": true
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CONC-F",
+          "closed": false
+        },
+        {
+          "lengthFt": 8676,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 24199688,
+        "2024": 28523822
+      }
+    },
+    {
+      "iata": "CMH",
+      "icao": "KCMH",
+      "name": "John Glenn Columbus International Airport",
+      "city": "Columbus",
+      "state": "OH",
+      "latitude": 39.998001,
+      "longitude": -82.891899,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 8000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10114,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 4172067,
+        "2024": 4387395
+      }
+    },
+    {
+      "iata": "CVG",
+      "icao": "KCVG",
+      "name": "Cincinnati Northern Kentucky International Airport",
+      "city": "Cincinnati / Covington",
+      "state": "KY",
+      "latitude": 39.048801,
+      "longitude": -84.667801,
+      "hubSize": "M",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 12001,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 11000,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 4413457,
+        "2024": 4500414
+      }
+    },
+    {
+      "iata": "DAL",
+      "icao": "KDAL",
+      "name": "Dallas Love Field",
+      "city": "Dallas",
+      "state": "TX",
+      "latitude": 32.844776,
+      "longitude": -96.847653,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 7752,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8800,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 6147,
+          "surface": "ASP",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 8080506,
+        "2024": 8654991
+      }
+    },
+    {
+      "iata": "DCA",
+      "icao": "KDCA",
+      "name": "Ronald Reagan Washington National Airport",
+      "city": "Washington",
+      "state": "VA",
+      "latitude": 38.8521,
+      "longitude": -77.037697,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 7169,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 5000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 5204,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 11595454,
+        "2024": 12750892
+      }
+    },
+    {
+      "iata": "DEN",
+      "icao": "KDEN",
+      "name": "Denver International Airport",
+      "city": "Denver",
+      "state": "CO",
+      "latitude": 39.860027,
+      "longitude": -104.673792,
+      "hubSize": "L",
+      "activeRunwayCount": 6,
+      "runways": [
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 16000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 33592945,
+        "2024": 40012895
+      }
+    },
+    {
+      "iata": "DFW",
+      "icao": "KDFW",
+      "name": "Dallas Fort Worth International Airport",
+      "city": "Dallas-Fort Worth",
+      "state": "TX",
+      "latitude": 32.896801,
+      "longitude": -97.038002,
+      "hubSize": "L",
+      "activeRunwayCount": 7,
+      "runways": [
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9300,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 13400,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8500,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 13400,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 13401,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 13400,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 35778573,
+        "2024": 42351316
+      }
+    },
+    {
+      "iata": "DTW",
+      "icao": "KDTW",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "city": "Detroit",
+      "state": "MI",
+      "latitude": 42.21377,
+      "longitude": -83.353786,
+      "hubSize": "L",
+      "activeRunwayCount": 6,
+      "runways": [
+        {
+          "lengthFt": 8501,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 10001,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12003,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8708,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8500,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 18143040,
+        "2024": 16110696
+      }
+    },
+    {
+      "iata": "EWR",
+      "icao": "KEWR",
+      "name": "Newark Liberty International Airport",
+      "city": "Newark",
+      "state": "NJ",
+      "latitude": 40.6894,
+      "longitude": -74.170545,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 6725,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 11000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9999,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 23160763,
+        "2024": 24544320
+      }
+    },
+    {
+      "iata": "FLL",
+      "icao": "KFLL",
+      "name": "Fort Lauderdale Hollywood International Airport",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "latitude": 26.072599,
+      "longitude": -80.152702,
+      "hubSize": "L",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 9000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 8000,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 17950989,
+        "2024": 17096131
+      }
+    },
+    {
+      "iata": "HNL",
+      "icao": "PHNL",
+      "name": "Daniel K. Inouye International Airport",
+      "city": "Honolulu, Oahu",
+      "state": "HI",
+      "latitude": 21.318387,
+      "longitude": -157.92567,
+      "hubSize": "L",
+      "activeRunwayCount": 6,
+      "runways": [
+        {
+          "lengthFt": 6955,
+          "surface": "ASPH-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 9002,
+          "surface": "ASPH-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 3000,
+          "surface": "WATER",
+          "closed": false
+        },
+        {
+          "lengthFt": 12360,
+          "surface": "ASPH-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "ASPH-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 5090,
+          "surface": "WATER",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 9988678,
+        "2024": 10449022
+      }
+    },
+    {
+      "iata": "HOU",
+      "icao": "KHOU",
+      "name": "William P. Hobby Airport",
+      "city": "Houston",
+      "state": "TX",
+      "latitude": 29.645336,
+      "longitude": -95.276812,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 7602,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 5148,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7602,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6000,
+          "surface": "PEM",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 7069614,
+        "2024": 7116967
+      }
+    },
+    {
+      "iata": "IAD",
+      "icao": "KIAD",
+      "name": "Washington Dulles International Airport",
+      "city": "Dulles",
+      "state": "VA",
+      "latitude": 38.9445,
+      "longitude": -77.455803,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 11500,
+          "surface": "CONC-G",
+          "closed": false
+        },
+        {
+          "lengthFt": 9400,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11500,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10501,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 11884117,
+        "2024": 13003234
+      }
+    },
+    {
+      "iata": "IAH",
+      "icao": "KIAH",
+      "name": "George Bush Intercontinental Airport",
+      "city": "Houston",
+      "state": "TX",
+      "latitude": 29.9844,
+      "longitude": -95.3414,
+      "hubSize": "L",
+      "activeRunwayCount": 5,
+      "runways": [
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9402,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 12001,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 21905309,
+        "2024": 23349157
+      }
+    },
+    {
+      "iata": "IND",
+      "icao": "KIND",
+      "name": "Indianapolis International Airport",
+      "city": "Indianapolis",
+      "state": "IN",
+      "latitude": 39.7173,
+      "longitude": -86.294403,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 11200,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7278,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 4709183,
+        "2024": 5181947
+      }
+    },
+    {
+      "iata": "JAX",
+      "icao": "KJAX",
+      "name": "Jacksonville International Airport",
+      "city": "Jacksonville",
+      "state": "FL",
+      "latitude": 30.492469,
+      "longitude": -81.687813,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7701,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 3479923,
+        "2024": 3749791
+      }
+    },
+    {
+      "iata": "JFK",
+      "icao": "KJFK",
+      "name": "John F. Kennedy International Airport",
+      "city": "New York",
+      "state": "NY",
+      "latitude": 40.639447,
+      "longitude": -73.779317,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 12079,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8400,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 14511,
+          "surface": "PEM",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 31036655,
+        "2024": 31466102
+      }
+    },
+    {
+      "iata": "LAS",
+      "icao": "KLAS",
+      "name": "Harry Reid International Airport",
+      "city": "Las Vegas",
+      "state": "NV",
+      "latitude": 36.083361,
+      "longitude": -115.151817,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 9770,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9769,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 14835,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10526,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 24728361,
+        "2024": 28244966
+      }
+    },
+    {
+      "iata": "LAX",
+      "icao": "KLAX",
+      "name": "Los Angeles International Airport",
+      "city": "Los Angeles",
+      "state": "CA",
+      "latitude": 33.942501,
+      "longitude": -118.407997,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 8926,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10859,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12894,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11095,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 42939104,
+        "2024": 37760834
+      }
+    },
+    {
+      "iata": "LGA",
+      "icao": "KLGA",
+      "name": "LaGuardia Airport",
+      "city": "New York",
+      "state": "NY",
+      "latitude": 40.777199,
+      "longitude": -73.872597,
+      "hubSize": "L",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 7002,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 7002,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 60,
+          "surface": "ASP",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 15393601,
+        "2024": 16715567
+      }
+    },
+    {
+      "iata": "MCI",
+      "icao": "KMCI",
+      "name": "Kansas City International Airport",
+      "city": "Kansas City",
+      "state": "MO",
+      "latitude": 39.301699,
+      "longitude": -94.713893,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 10801,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9500,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9501,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 5759419,
+        "2024": 5915078
+      }
+    },
+    {
+      "iata": "MCO",
+      "icao": "KMCO",
+      "name": "Orlando International Airport",
+      "city": "Orlando",
+      "state": "FL",
+      "latitude": 28.429399490356445,
+      "longitude": -81.30899810791016,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 9001,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 12005,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 12004,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 24562271,
+        "2024": 27859783
+      }
+    },
+    {
+      "iata": "MDW",
+      "icao": "KMDW",
+      "name": "Chicago Midway International Airport",
+      "city": "Chicago",
+      "state": "IL",
+      "latitude": 41.785999,
+      "longitude": -87.752403,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 5507,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6445,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 6522,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 5141,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 3859,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 10081781,
+        "2024": 10360093
+      }
+    },
+    {
+      "iata": "MIA",
+      "icao": "KMIA",
+      "name": "Miami International Airport",
+      "city": "Miami",
+      "state": "FL",
+      "latitude": 25.796011,
+      "longitude": -80.289751,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 8600,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10506,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 13016,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9360,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 21421031,
+        "2024": 26588002
+      }
+    },
+    {
+      "iata": "MKE",
+      "icao": "KMKE",
+      "name": "General Mitchell International Airport",
+      "city": "Milwaukee",
+      "state": "WI",
+      "latitude": 42.947201,
+      "longitude": -87.896599,
+      "hubSize": "M",
+      "activeRunwayCount": 5,
+      "runways": [
+        {
+          "lengthFt": 9990,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 4182,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 4797,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 8300,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 5537,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 3374073,
+        "2024": 3104054
+      }
+    },
+    {
+      "iata": "MSP",
+      "icao": "KMSP",
+      "name": "Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field",
+      "city": "Minneapolis",
+      "state": "MN",
+      "latitude": 44.880081,
+      "longitude": -93.221741,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 11006,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8200,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 10000,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 19192917,
+        "2024": 18054481
+      }
+    },
+    {
+      "iata": "MSY",
+      "icao": "KMSY",
+      "name": "Louis Armstrong New Orleans International Airport",
+      "city": "New Orleans",
+      "state": "LA",
+      "latitude": 29.993401,
+      "longitude": -90.264673,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 7002,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 3570,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 10104,
+          "surface": "PEM",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 6874111,
+        "2024": 6537092
+      }
+    },
+    {
+      "iata": "OAK",
+      "icao": "KOAK",
+      "name": "Oakland San Francisco Bay Airport",
+      "city": "Oakland",
+      "state": "CA",
+      "latitude": 37.720085,
+      "longitude": -122.221184,
+      "hubSize": "M",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 5457,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6213,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10520,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 3376,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 6560230,
+        "2024": 5292736
+      }
+    },
+    {
+      "iata": "OGG",
+      "icao": "PHOG",
+      "name": "Kahului International Airport",
+      "city": "Kahului",
+      "state": "HI",
+      "latitude": 20.896263,
+      "longitude": -156.431837,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 6998,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 4980,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 3791807,
+        "2024": 3415615
+      }
+    },
+    {
+      "iata": "OMA",
+      "icao": "KOMA",
+      "name": "Eppley Airfield",
+      "city": "Omaha",
+      "state": "NE",
+      "latitude": 41.3032,
+      "longitude": -95.894096,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 8500,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9502,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8154,
+          "surface": "PEM",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2455274,
+        "2024": 2583212
+      }
+    },
+    {
+      "iata": "ONT",
+      "icao": "KONT",
+      "name": "Ontario International Airport",
+      "city": "Ontario",
+      "state": "CA",
+      "latitude": 34.056,
+      "longitude": -117.600998,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 12197,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 10200,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 2723002,
+        "2024": 3494554
+      }
+    },
+    {
+      "iata": "ORD",
+      "icao": "KORD",
+      "name": "Chicago O'Hare International Airport",
+      "city": "Chicago",
+      "state": "IL",
+      "latitude": 41.9786,
+      "longitude": -87.9048,
+      "hubSize": "L",
+      "activeRunwayCount": 8,
+      "runways": [
+        {
+          "lengthFt": 7500,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 8075,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 11245,
+          "surface": "concrete",
+          "closed": false
+        },
+        {
+          "lengthFt": 7500,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 11260,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 10800,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 13000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7500,
+          "surface": "CONCRETE",
+          "closed": false
+        },
+        {
+          "lengthFt": 10005,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 9686,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 5332,
+          "surface": "ASP",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 40871223,
+        "2024": 38575693
+      }
+    },
+    {
+      "iata": "PDX",
+      "icao": "KPDX",
+      "name": "Portland International Airport",
+      "city": "Portland",
+      "state": "OR",
+      "latitude": 45.588699,
+      "longitude": -122.598,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 9825,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 11000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6000,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 9797408,
+        "2024": 8639088
+      }
+    },
+    {
+      "iata": "PHL",
+      "icao": "KPHL",
+      "name": "Philadelphia International Airport",
+      "city": "Philadelphia",
+      "state": "PA",
+      "latitude": 39.871899,
+      "longitude": -75.241096,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 5001,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 9500,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 6500,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 16006389,
+        "2024": 15102261
+      }
+    },
+    {
+      "iata": "PHX",
+      "icao": "KPHX",
+      "name": "Phoenix Sky Harbor International Airport",
+      "city": "Phoenix",
+      "state": "AZ",
+      "latitude": 33.435302,
+      "longitude": -112.005905,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 10300,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 7800,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11489,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 22433552,
+        "2024": 25595723
+      }
+    },
+    {
+      "iata": "PIT",
+      "icao": "KPIT",
+      "name": "Pittsburgh International Airport",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "latitude": 40.491501,
+      "longitude": -80.232903,
+      "hubSize": "M",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 10775,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 10502,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 11500,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8101,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 4715947,
+        "2024": 4862376
+      }
+    },
+    {
+      "iata": "RDU",
+      "icao": "KRDU",
+      "name": "Raleigh-Durham International Airport",
+      "city": "Raleigh/Durham",
+      "state": "NC",
+      "latitude": 35.878659,
+      "longitude": -78.7873,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 10000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 7500,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 3570,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 6919429,
+        "2024": 7584394
+      }
+    },
+    {
+      "iata": "RSW",
+      "icao": "KRSW",
+      "name": "Southwest Florida International Airport",
+      "city": "Fort Myers",
+      "state": "FL",
+      "latitude": 26.534685,
+      "longitude": -81.752816,
+      "hubSize": "M",
+      "activeRunwayCount": 1,
+      "runways": [
+        {
+          "lengthFt": 12000,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 5044024,
+        "2024": 5425293
+      }
+    },
+    {
+      "iata": "SAN",
+      "icao": "KSAN",
+      "name": "San Diego International Airport",
+      "city": "San Diego",
+      "state": "CA",
+      "latitude": 32.733601,
+      "longitude": -117.190002,
+      "hubSize": "L",
+      "activeRunwayCount": 1,
+      "runways": [
+        {
+          "lengthFt": 9401,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 12648692,
+        "2024": 12780013
+      }
+    },
+    {
+      "iata": "SAT",
+      "icao": "KSAT",
+      "name": "San Antonio International Airport",
+      "city": "San Antonio",
+      "state": "TX",
+      "latitude": 29.533701,
+      "longitude": -98.469803,
+      "hubSize": "M",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 8505,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 5519,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 8502,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 5022980,
+        "2024": 5466684
+      }
+    },
+    {
+      "iata": "SEA",
+      "icao": "KSEA",
+      "name": "Seattle–Tacoma International Airport",
+      "city": "Seattle",
+      "state": "WA",
+      "latitude": 47.447943,
+      "longitude": -122.310276,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 9426,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 11901,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8500,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 0,
+          "surface": "unknown",
+          "closed": true
+        }
+      ],
+      "enplanements": {
+        "2019": 25001762,
+        "2024": 25414592
+      }
+    },
+    {
+      "iata": "SFO",
+      "icao": "KSFO",
+      "name": "San Francisco International Airport",
+      "city": "San Francisco",
+      "state": "CA",
+      "latitude": 37.619806,
+      "longitude": -122.374821,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 11870,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 11381,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 7650,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 8660,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 27779230,
+        "2024": 25078968
+      }
+    },
+    {
+      "iata": "SJC",
+      "icao": "KSJC",
+      "name": "Mineta San Jose International Airport",
+      "city": "San Jose",
+      "state": "CA",
+      "latitude": 37.362452,
+      "longitude": -121.929188,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 4599,
+          "surface": "ASP",
+          "closed": true
+        },
+        {
+          "lengthFt": 11000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11000,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 7688152,
+        "2024": 5822019
+      }
+    },
+    {
+      "iata": "SLC",
+      "icao": "KSLC",
+      "name": "Salt Lake City International Airport",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "latitude": 40.78886,
+      "longitude": -111.979866,
+      "hubSize": "L",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 4893,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 12002,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 12000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9596,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 12840841,
+        "2024": 13543570
+      }
+    },
+    {
+      "iata": "SMF",
+      "icao": "KSMF",
+      "name": "Sacramento International Airport",
+      "city": "Sacramento",
+      "state": "CA",
+      "latitude": 38.6954,
+      "longitude": -121.591003,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 8605,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 8598,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 6454413,
+        "2024": 6679426
+      }
+    },
+    {
+      "iata": "SNA",
+      "icao": "KSNA",
+      "name": "John Wayne Orange County International Airport",
+      "city": "Santa Ana",
+      "state": "CA",
+      "latitude": 33.675063,
+      "longitude": -117.869281,
+      "hubSize": "M",
+      "activeRunwayCount": 2,
+      "runways": [
+        {
+          "lengthFt": 5700,
+          "surface": "ASP",
+          "closed": false
+        },
+        {
+          "lengthFt": 2886,
+          "surface": "ASP",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 5153276,
+        "2024": 5370273
+      }
+    },
+    {
+      "iata": "STL",
+      "icao": "KSTL",
+      "name": "St. Louis Lambert International Airport",
+      "city": "St Louis",
+      "state": "MO",
+      "latitude": 38.748697,
+      "longitude": -90.370003,
+      "hubSize": "M",
+      "activeRunwayCount": 4,
+      "runways": [
+        {
+          "lengthFt": 7603,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9000,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 9013,
+          "surface": "CON",
+          "closed": false
+        },
+        {
+          "lengthFt": 11020,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 7773759,
+        "2024": 7807362
+      }
+    },
+    {
+      "iata": "TPA",
+      "icao": "KTPA",
+      "name": "Tampa International Airport",
+      "city": "Tampa",
+      "state": "FL",
+      "latitude": 27.9755,
+      "longitude": -82.533203,
+      "hubSize": "L",
+      "activeRunwayCount": 3,
+      "runways": [
+        {
+          "lengthFt": 6999,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 8300,
+          "surface": "PEM",
+          "closed": false
+        },
+        {
+          "lengthFt": 11002,
+          "surface": "CON",
+          "closed": false
+        }
+      ],
+      "enplanements": {
+        "2019": 10978756,
+        "2024": 12075591
+      }
+    }
+  ],
+  "flightStats": {}
+}
