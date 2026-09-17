@@ -10,7 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "seed": "tsx scripts/build-seed.ts",
+    "seed": "tsx --env-file-if-exists=../.env scripts/build-seed.ts",
     "seed:print-sample": "tsx scripts/print-sample-airports.ts",
     "seed:check-opensky": "tsx scripts/check-opensky.ts",
     "tool": "tsx scripts/run-tool.ts",

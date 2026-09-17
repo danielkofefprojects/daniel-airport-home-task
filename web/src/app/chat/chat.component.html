@@ -71,7 +71,8 @@
         class="mic-btn"
         [class.mic-btn-active]="listening()"
         [disabled]="loading()"
-        [attr.aria-label]="listening() ? 'Stop listening' : 'Speak your question'"
+        [attr.aria-label]="listening() ? 'Stop dictating' : 'Dictate your question'"
+        title="Dictate (text appears as you talk)"
         (click)="toggleVoice()"
       >
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

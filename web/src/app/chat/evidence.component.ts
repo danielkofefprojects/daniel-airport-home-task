@@ -1,5 +1,6 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { EvidenceItem } from '../models';
+import { formatDateDDMMYYYY } from '../utils/format-date';
 
 interface EvidenceRow {
   label: string;
@@ -18,8 +19,8 @@ interface EvidenceView {
   rows: EvidenceRow[];
 }
 
-const SCORE_KEYS = ['score', 'opportunityScore', 'congestionScore', 'demandScore', 'unmetDemandIndex'];
-const DRIVER_KEYS = ['topDrivers', 'opportunityDrivers', 'unmetDemandDrivers'];
+const SCORE_KEYS = ['score', 'opportunityScore', 'unmetDemandIndex', 'demandScore', 'congestionScore'];
+const DRIVER_KEYS = ['topDrivers', 'opportunityDrivers', 'unmetDemandDrivers', 'drivers'];
 const SKIP_KEYS = new Set([
   'iata',
   'name',
@@ -29,6 +30,15 @@ const SKIP_KEYS = new Set([
   'confidenceReasons',
   ...DRIVER_KEYS
 ]);
+
+function flattenNested(record: Record<string, unknown>): [string, unknown][] {
+  return Object.entries(record).flatMap(([key, value]) => {
+    if (isPlainObject(value)) {
+      return Object.entries(value).map(([k, v]) => [`${key}.${k}`, v] as [string, unknown]);
+    }
+    return [[key, value] as [string, unknown]];
+  });
+}
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -53,8 +63,8 @@ function rowFromRecord(record: Record<string, unknown>): EvidenceRow {
   const label = [record['iata'], record['name']].filter(Boolean).join(' — ') || 'Result';
   const scoreKey = SCORE_KEYS.find((k) => typeof record[k] === 'number');
   const driverKey = DRIVER_KEYS.find((k) => isDriverArray(record[k]));
-  const fields = Object.entries(record)
-    .filter(([key, value]) => !SKIP_KEYS.has(key) && key !== scoreKey && value !== undefined && !isPlainObject(value))
+  const fields = flattenNested(record)
+    .filter(([key, value]) => !SKIP_KEYS.has(key) && key !== scoreKey && value !== undefined)
     .map(([key, value]) => ({ key, value: formatValue(value) }));
 
   return {
@@ -98,7 +108,7 @@ export class EvidenceComponent {
     this.evidence().map((item) => ({
       tool: item.tool,
       sources: item.artifact.sources,
-      asOf: item.artifact.asOf,
+      asOf: formatDateDDMMYYYY(item.artifact.asOf),
       caveats: item.artifact.caveats,
       rows: extractRows(item.artifact.data)
     }))

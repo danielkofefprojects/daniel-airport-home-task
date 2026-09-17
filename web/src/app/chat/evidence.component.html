@@ -12,42 +12,44 @@
             <h4>{{ view.tool }}</h4>
 
             @if (view.rows.length > 0) {
-              <table class="evidence-table">
-                <thead>
-                  <tr>
-                    <th>Airport</th>
-                    <th>Score</th>
-                    <th>Tier</th>
-                    <th>Confidence</th>
-                    <th>Why (drivers)</th>
-                    <th>Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @for (row of view.rows; track row.label) {
-                    <tr>
-                      <td>{{ row.label }}</td>
-                      <td>{{ row.score !== undefined ? row.score.toFixed(1) : '—' }}</td>
-                      <td>{{ row.tier ?? '—' }}</td>
-                      <td>{{ row.confidence ?? '—' }}</td>
-                      <td>
-                        @if (row.drivers.length > 0) {
-                          @for (driver of row.drivers; track driver.name) {
-                            <span class="evidence-field">{{ driver.name }}: {{ driver.contribution.toFixed(1) }}</span>
-                          }
-                        } @else {
-                          —
-                        }
-                      </td>
-                      <td>
-                        @for (field of row.fields; track field.key) {
-                          <span class="evidence-field">{{ field.key }}: {{ field.value }}</span>
-                        }
-                      </td>
-                    </tr>
-                  }
-                </tbody>
-              </table>
+              <ul class="evidence-rows">
+                @for (row of view.rows; track row.label) {
+                  <li class="evidence-row">
+                    <p class="evidence-row-title">{{ row.label }}</p>
+                    <ul class="evidence-bullets">
+                      @if (row.score !== undefined) {
+                        <li><strong>Score:</strong> {{ row.score.toFixed(1) }}</li>
+                      }
+                      @if (row.tier) {
+                        <li><strong>Tier:</strong> {{ row.tier }}</li>
+                      }
+                      @if (row.confidence) {
+                        <li><strong>Confidence:</strong> {{ row.confidence }}</li>
+                      }
+                      @if (row.drivers.length > 0) {
+                        <li>
+                          <strong>Why (drivers):</strong>
+                          <ul class="evidence-sublist">
+                            @for (driver of row.drivers; track driver.name) {
+                              <li>{{ driver.name }}: {{ driver.contribution.toFixed(1) }}</li>
+                            }
+                          </ul>
+                        </li>
+                      }
+                      @if (row.fields.length > 0) {
+                        <li>
+                          <strong>Details:</strong>
+                          <ul class="evidence-sublist">
+                            @for (field of row.fields; track field.key) {
+                              <li>{{ field.key }}: {{ field.value }}</li>
+                            }
+                          </ul>
+                        </li>
+                      }
+                    </ul>
+                  </li>
+                }
+              </ul>
             }
 
             <div class="evidence-meta">

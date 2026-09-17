@@ -34,16 +34,22 @@ export class ChatComponent {
   readonly voiceSupported = this.voiceService.supported;
   readonly listening = this.voiceService.listening;
 
+  private dictationBase = '';
+
+  /** Continuously pastes interim + final speech into the input as the user talks. */
   toggleVoice(): void {
     if (this.listening()) {
       this.voiceService.stop();
       return;
     }
     this.error.set(null);
-    this.voiceService.start(
-      (transcript) => {
-        this.draft.set(transcript);
-        void this.send();
+    this.dictationBase = this.draft() ? this.draft() + ' ' : '';
+    this.voiceService.startDictation(
+      (transcript, isFinal) => {
+        this.draft.set(this.dictationBase + transcript);
+        if (isFinal) {
+          this.dictationBase = this.draft() ? this.draft() + ' ' : '';
+        }
       },
       () => this.error.set('Could not hear you. Please try again or type your question.')
     );

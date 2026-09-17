@@ -14,7 +14,8 @@ interface SpeechRecognitionLike extends EventTarget {
 }
 
 interface SpeechRecognitionEventLike {
-  results: ArrayLike<ArrayLike<{ transcript: string }>>;
+  results: ArrayLike<ArrayLike<{ transcript: string }> & { isFinal: boolean }>;
+  resultIndex: number;
 }
 
 function getSpeechRecognitionCtor(): SpeechRecognitionCtor | undefined {
@@ -33,17 +34,30 @@ export class VoiceService {
   readonly supported = !!this.ctor;
   readonly listening = signal(false);
 
-  start(onResult: (transcript: string) => void, onError?: () => void): void {
+  stop(): void {
+    this.recognition?.stop();
+  }
+
+  /**
+   * Streams interim + final transcripts as the user speaks, rather than
+   * waiting for silence. Callers are responsible for combining a stable
+   * "committed" prefix (built from final results) with the latest interim
+   * text on each call.
+   */
+  startDictation(onTranscript: (transcript: string, isFinal: boolean) => void, onError?: () => void): void {
     if (!this.ctor || this.listening()) return;
 
     const recognition = new this.ctor();
     recognition.lang = 'en-US';
-    recognition.interimResults = false;
+    recognition.interimResults = true;
     recognition.maxAlternatives = 1;
 
     recognition.onresult = (event) => {
-      const transcript = event.results[0]?.[0]?.transcript?.trim();
-      if (transcript) onResult(transcript);
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const result = event.results[i];
+        const transcript = result?.[0]?.transcript ?? '';
+        onTranscript(transcript, result.isFinal);
+      }
     };
     recognition.onerror = () => {
       onError?.();
@@ -56,9 +70,5 @@ export class VoiceService {
     this.recognition = recognition;
     this.listening.set(true);
     recognition.start();
-  }
-
-  stop(): void {
-    this.recognition?.stop();
   }
 }

@@ -1,10 +1,129 @@
 {
-  "generatedAt": "2026-09-17T13:02:03.024Z",
+  "generatedAt": "2026-09-17T19:06:03.121Z",
   "sources": [
     "https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv",
     "https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/runways.csv",
     "https://www.faa.gov/airports/planning_capacity/passenger_allcargo_stats/passenger/ARP-cy2024-all-enplanements.xlsx",
-    "https://www.faa.gov/sites/faa.gov/files/airports/planning_capacity/passenger_allcargo_stats/passenger/cy19-all-enplanements.xlsx"
+    "https://www.faa.gov/sites/faa.gov/files/airports/planning_capacity/passenger_allcargo_stats/passenger/cy19-all-enplanements.xlsx",
+    "https://opensky-network.org/api/flights/departure?airport=KBDL&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBDL&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBDL&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KABQ&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KABQ&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KABQ&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=PANC&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=PANC&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=PANC&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KATL&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KATL&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KATL&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KAUS&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KAUS&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KAUS&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBOS&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBOS&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBOS&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBOI&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBOI&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBOI&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBNA&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBNA&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBNA&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBUF&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBUF&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBUF&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBUR&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBUR&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBUR&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KBWI&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KBWI&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KBWI&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KCHS&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KCHS&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KCHS&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KCLT&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KCLT&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KCLT&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KCMH&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KCMH&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KCMH&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KCVG&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KCVG&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KCVG&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KCLE&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KCLE&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KCLE&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KDCA&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KDCA&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KDCA&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KDAL&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KDAL&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KDAL&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KDFW&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KDFW&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KDFW&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KDEN&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KDEN&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KDEN&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KEWR&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KEWR&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KEWR&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KFLL&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KFLL&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KFLL&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=PHNL&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=PHNL&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=PHNL&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KIAD&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KIAD&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KIAD&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KDTW&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KDTW&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KDTW&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KHOU&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KHOU&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KHOU&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KIND&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KIND&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KIND&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KIAH&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KIAH&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KIAH&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KJAX&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KJAX&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KJAX&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KMCI&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMCI&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMCI&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KLGA&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KLGA&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KLGA&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KLAS&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KLAS&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KLAS&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KMCO&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMCO&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMCO&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KJFK&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KJFK&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KJFK&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KMDW&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMDW&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMDW&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KMSP&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMSP&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMSP&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KOAK&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMKE&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMKE&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMSY&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMSY&begin=1789430400&end=1789516800",
+    "https://opensky-network.org/api/flights/departure?airport=KMSY&begin=1789344000&end=1789430400",
+    "https://opensky-network.org/api/flights/departure?airport=KMIA&begin=1789516800&end=1789603200",
+    "https://opensky-network.org/api/flights/departure?airport=KMIA&begin=1789430400&end=1789516800"
   ],
   "airports": [
     {
@@ -2150,5 +2269,494 @@
       }
     }
   ],
-  "flightStats": {}
+  "flightStats": {
+    "BDL": {
+      "dailyOps": 211.33333333333334,
+      "sampleSize": 317,
+      "unknownDestShare": 0.3280757097791798,
+      "longHaulShare": 0.0031545741324921135,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:41.974Z"
+    },
+    "ABQ": {
+      "dailyOps": 284.6666666666667,
+      "sampleSize": 427,
+      "unknownDestShare": 0.3981264637002342,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:42.622Z"
+    },
+    "ANC": {
+      "dailyOps": 677.3333333333334,
+      "sampleSize": 1016,
+      "unknownDestShare": 0.6860236220472441,
+      "longHaulShare": 0.07381889763779527,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:42.744Z"
+    },
+    "ATL": {
+      "dailyOps": 2127.3333333333335,
+      "sampleSize": 3191,
+      "unknownDestShare": 0.47477279849576937,
+      "longHaulShare": 0.0012535255405828893,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:43.177Z"
+    },
+    "AUS": {
+      "dailyOps": 714,
+      "sampleSize": 1071,
+      "unknownDestShare": 0.29785247432306255,
+      "longHaulShare": 0.0028011204481792717,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:43.177Z"
+    },
+    "BOS": {
+      "dailyOps": 1210.6666666666667,
+      "sampleSize": 1816,
+      "unknownDestShare": 0.3849118942731278,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:44.801Z"
+    },
+    "BOI": {
+      "dailyOps": 322,
+      "sampleSize": 483,
+      "unknownDestShare": 0.36024844720496896,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:44.881Z"
+    },
+    "BNA": {
+      "dailyOps": 821.3333333333334,
+      "sampleSize": 1232,
+      "unknownDestShare": 0.3262987012987013,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:44.881Z"
+    },
+    "BUF": {
+      "dailyOps": 245.33333333333334,
+      "sampleSize": 368,
+      "unknownDestShare": 0.26358695652173914,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:45.042Z"
+    },
+    "BUR": {
+      "dailyOps": 289.3333333333333,
+      "sampleSize": 434,
+      "unknownDestShare": 0.271889400921659,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:45.496Z"
+    },
+    "BWI": {
+      "dailyOps": 609.3333333333334,
+      "sampleSize": 914,
+      "unknownDestShare": 0.3435448577680525,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:46.647Z"
+    },
+    "CHS": {
+      "dailyOps": 287.3333333333333,
+      "sampleSize": 431,
+      "unknownDestShare": 0.37354988399071926,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:47.045Z"
+    },
+    "CLT": {
+      "dailyOps": 1460,
+      "sampleSize": 2190,
+      "unknownDestShare": 0.5753424657534246,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:47.766Z"
+    },
+    "CMH": {
+      "dailyOps": 350,
+      "sampleSize": 525,
+      "unknownDestShare": 0.23809523809523808,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:47.980Z"
+    },
+    "CVG": {
+      "dailyOps": 432.6666666666667,
+      "sampleSize": 649,
+      "unknownDestShare": 0.2696456086286595,
+      "longHaulShare": 0.004622496147919877,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:48.888Z"
+    },
+    "CLE": {
+      "dailyOps": 324.6666666666667,
+      "sampleSize": 487,
+      "unknownDestShare": 0.20123203285420946,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:49.076Z"
+    },
+    "DCA": {
+      "dailyOps": 906.6666666666666,
+      "sampleSize": 1360,
+      "unknownDestShare": 0.3463235294117647,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:49.722Z"
+    },
+    "DAL": {
+      "dailyOps": 638.6666666666666,
+      "sampleSize": 958,
+      "unknownDestShare": 0.4519832985386221,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:49.808Z"
+    },
+    "DFW": {
+      "dailyOps": 1975.3333333333333,
+      "sampleSize": 2963,
+      "unknownDestShare": 0.5416807289908876,
+      "longHaulShare": 0.003712453594330071,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:51.614Z"
+    },
+    "DEN": {
+      "dailyOps": 1859.3333333333333,
+      "sampleSize": 2789,
+      "unknownDestShare": 0.44424524919325925,
+      "longHaulShare": 0.0007171029042667623,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:51.951Z"
+    },
+    "EWR": {
+      "dailyOps": 1196.6666666666667,
+      "sampleSize": 1795,
+      "unknownDestShare": 0.42172701949860725,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:52.405Z"
+    },
+    "FLL": {
+      "dailyOps": 558.6666666666666,
+      "sampleSize": 838,
+      "unknownDestShare": 0.34725536992840095,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:52.689Z"
+    },
+    "HNL": {
+      "dailyOps": 646.6666666666666,
+      "sampleSize": 970,
+      "unknownDestShare": 0.5628865979381443,
+      "longHaulShare": 0.032989690721649485,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:53.628Z"
+    },
+    "IAD": {
+      "dailyOps": 934,
+      "sampleSize": 1401,
+      "unknownDestShare": 0.6045681655960029,
+      "longHaulShare": 0.0014275517487508922,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:54.329Z"
+    },
+    "DTW": {
+      "dailyOps": 876,
+      "sampleSize": 1314,
+      "unknownDestShare": 0.363013698630137,
+      "longHaulShare": 0.0015220700152207,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:54.607Z"
+    },
+    "HOU": {
+      "dailyOps": 483.3333333333333,
+      "sampleSize": 725,
+      "unknownDestShare": 0.44551724137931037,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:54.638Z"
+    },
+    "IND": {
+      "dailyOps": 558.6666666666666,
+      "sampleSize": 838,
+      "unknownDestShare": 0.3329355608591885,
+      "longHaulShare": 0.002386634844868735,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:55.330Z"
+    },
+    "IAH": {
+      "dailyOps": 1112.6666666666667,
+      "sampleSize": 1669,
+      "unknownDestShare": 0.5020970641102457,
+      "longHaulShare": 0.0035949670461354103,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:55.493Z"
+    },
+    "JAX": {
+      "dailyOps": 244,
+      "sampleSize": 366,
+      "unknownDestShare": 0.3087431693989071,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:56.332Z"
+    },
+    "LAX": {
+      "dailyOps": 1432.6666666666667,
+      "sampleSize": 2149,
+      "unknownDestShare": 0.354118194509074,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:57.500Z"
+    },
+    "MCI": {
+      "dailyOps": 290,
+      "sampleSize": 435,
+      "unknownDestShare": 0.09195402298850575,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:58.724Z"
+    },
+    "LGA": {
+      "dailyOps": 1073.3333333333333,
+      "sampleSize": 1610,
+      "unknownDestShare": 0.36770186335403726,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:58.857Z"
+    },
+    "LAS": {
+      "dailyOps": 1386.6666666666667,
+      "sampleSize": 2080,
+      "unknownDestShare": 0.38653846153846155,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:59.173Z"
+    },
+    "MCO": {
+      "dailyOps": 856.6666666666666,
+      "sampleSize": 1285,
+      "unknownDestShare": 0.32140077821011676,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:59.367Z"
+    },
+    "JFK": {
+      "dailyOps": 1127.3333333333333,
+      "sampleSize": 1691,
+      "unknownDestShare": 0.48314606741573035,
+      "longHaulShare": 0.00768775872264932,
+      "days": 3,
+      "asOf": "2026-09-17T19:05:59.460Z"
+    },
+    "MDW": {
+      "dailyOps": 638,
+      "sampleSize": 957,
+      "unknownDestShare": 0.36990595611285265,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.205Z"
+    },
+    "MSP": {
+      "dailyOps": 898.6666666666666,
+      "sampleSize": 1348,
+      "unknownDestShare": 0.4258160237388724,
+      "longHaulShare": 0.002225519287833828,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.537Z"
+    },
+    "OAK": {
+      "dailyOps": 114,
+      "sampleSize": 171,
+      "unknownDestShare": 0.4093567251461988,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.776Z"
+    },
+    "MKE": {
+      "dailyOps": 179.33333333333334,
+      "sampleSize": 269,
+      "unknownDestShare": 0.34572490706319703,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.873Z"
+    },
+    "MSY": {
+      "dailyOps": 275.3333333333333,
+      "sampleSize": 413,
+      "unknownDestShare": 0.1864406779661017,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.904Z"
+    },
+    "OGG": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:00.958Z"
+    },
+    "MIA": {
+      "dailyOps": 638.6666666666666,
+      "sampleSize": 958,
+      "unknownDestShare": 0.5480167014613778,
+      "longHaulShare": 0.005219206680584551,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.051Z"
+    },
+    "OMA": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.211Z"
+    },
+    "ONT": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.271Z"
+    },
+    "ORD": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.356Z"
+    },
+    "PDX": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.362Z"
+    },
+    "PHL": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.451Z"
+    },
+    "PHX": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.653Z"
+    },
+    "PIT": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.705Z"
+    },
+    "RDU": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.765Z"
+    },
+    "SAN": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:01.837Z"
+    },
+    "SAT": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.130Z"
+    },
+    "RSW": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.147Z"
+    },
+    "SEA": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.178Z"
+    },
+    "SJC": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.270Z"
+    },
+    "SFO": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.276Z"
+    },
+    "SLC": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.527Z"
+    },
+    "SMF": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.590Z"
+    },
+    "SNA": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.593Z"
+    },
+    "TPA": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:02.808Z"
+    },
+    "STL": {
+      "dailyOps": 0,
+      "sampleSize": 0,
+      "unknownDestShare": 0,
+      "longHaulShare": 0,
+      "days": 3,
+      "asOf": "2026-09-17T19:06:03.121Z"
+    }
+  }
 }

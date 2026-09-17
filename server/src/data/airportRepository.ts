@@ -1,19 +1,59 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { z } from "zod";
 import { fetchFaaEnplanements } from "./faaEnplanements.js";
 import { fetchOurAirports } from "./ourairports.js";
 import type { AirportRecord, DataEnvelope, FlightSampleSummary, SeedData } from "../types.js";
+import { formatDateDDMMYYYY } from "../utils/formatDate.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SEED_PATH = path.resolve(__dirname, "../../data/seed/airports.json");
+
+const runwaySchema = z.object({
+  lengthFt: z.number(),
+  surface: z.string(),
+  closed: z.boolean()
+});
+
+const airportRecordSchema = z.object({
+  iata: z.string(),
+  icao: z.string(),
+  name: z.string(),
+  city: z.string(),
+  state: z.string(),
+  latitude: z.number(),
+  longitude: z.number(),
+  hubSize: z.enum(["L", "M", "S", "N", "nonhub"]),
+  activeRunwayCount: z.number(),
+  runways: z.array(runwaySchema),
+  enplanements: z.record(z.string(), z.number())
+});
+
+const flightSampleSummarySchema = z.object({
+  dailyOps: z.number(),
+  sampleSize: z.number(),
+  unknownDestShare: z.number(),
+  longHaulShare: z.number(),
+  days: z.number(),
+  asOf: z.string()
+});
+
+const seedDataSchema = z.object({
+  generatedAt: z.string().refine((v) => !Number.isNaN(new Date(v).getTime()), {
+    message: "generatedAt must be a valid ISO date string"
+  }),
+  sources: z.array(z.string()),
+  airports: z.array(airportRecordSchema),
+  flightStats: z.record(z.string(), flightSampleSummarySchema)
+}) satisfies z.ZodType<SeedData>;
 
 let seedCache: SeedData | undefined;
 
 async function loadSeed(): Promise<SeedData> {
   if (seedCache) return seedCache;
   const raw = await readFile(SEED_PATH, "utf-8");
-  seedCache = JSON.parse(raw) as SeedData;
+  seedCache = seedDataSchema.parse(JSON.parse(raw));
   return seedCache;
 }
 
@@ -98,10 +138,10 @@ export async function loadPeerFlightStats(): Promise<DataEnvelope<Record<string,
   const hasSamples = Object.keys(seed.flightStats).length > 0;
   return {
     data: seed.flightStats,
-    sources: ["OpenSky Network (seed snapshot)"],
+    sources: hasSamples ? ["OpenSky Network (seed snapshot)"] : [],
     asOf: seed.generatedAt,
     caveats: hasSamples
-      ? [`Ops/runway percentiles use an OpenSky sample captured at seed time (${seed.generatedAt}).`]
+      ? [`Ops/runway percentiles use an OpenSky sample captured at seed time (${formatDateDDMMYYYY(seed.generatedAt)}).`]
       : ["No OpenSky sample data in seed; ops/runway percentiles are unavailable for ranking."]
   };
 }
