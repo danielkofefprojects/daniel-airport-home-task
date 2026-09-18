@@ -1,6 +1,35 @@
 import { createMiddleware } from "langchain";
 import { SystemMessage, ToolMessage } from "@langchain/core/messages";
 
+/** Logs each tool call's name, args, duration, and outcome (result summary or error). */
+export const toolLoggingMiddleware = createMiddleware({
+  name: "toolLoggingMiddleware",
+  wrapToolCall: async (request, handler) => {
+    const name = request.toolCall.name;
+    const args = JSON.stringify(request.toolCall.args);
+    const start = Date.now();
+    console.log(`[tool] ${name} start args=${args}`);
+    try {
+      const result = await handler(request);
+      const ms = Date.now() - start;
+      if (result instanceof ToolMessage) {
+        const status = result.status === "error" ? "error" : "ok";
+        const contentPreview =
+          typeof result.content === "string" ? result.content.slice(0, 200) : JSON.stringify(result.content).slice(0, 200);
+        console.log(`[tool] ${name} ${status} ${ms}ms result=${contentPreview}`);
+      } else {
+        console.log(`[tool] ${name} ok(command) ${ms}ms`);
+      }
+      return result;
+    } catch (err) {
+      const ms = Date.now() - start;
+      const message = err instanceof Error ? err.message : String(err);
+      console.error(`[tool] ${name} failed ${ms}ms: ${message}`);
+      throw err;
+    }
+  }
+});
+
 const MAX_HISTORY_MESSAGES = 16;
 
 /**
