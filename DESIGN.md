@@ -121,7 +121,38 @@ never hidden in prose. The system prompt requires the model to state data vintag
 to explicitly label any general background knowledge (e.g. weather-related arrival-rate context) as distinct
 from computed data.
 
-## 7. Future work
+## 7. Test coverage
+
+`npm test` runs Vitest over `server/test/`, organized around the same "AI vs. deterministic code" split as
+section 4: the parts that must be numerically correct are unit-tested directly, and the agent/LLM plumbing is
+tested with a fake chat model so suites are fast, free, and deterministic in CI.
+
+- **Scoring & KPIs** (`kpis.test.ts`, `normalize.test.ts`, `scores.test.ts`, `confidence.test.ts`) — the pure
+  functions in `server/src/scoring/` are the one place a bug would silently produce a wrong ranking or
+  recommendation, so every formula and the confidence-downgrade rules are covered directly against known inputs.
+  This is the highest-value coverage in the project: it's what lets the hard rule "the LLM never computes numbers"
+  actually be trusted rather than just asserted.
+- **Data/cache layer** (`cache.test.ts`, `nasStatus.test.ts`, `geo.test.ts`) — verifies the TTL cache's fetch/hit/
+  expire/stale-fallback behavior and small pure parsers (NAS status classification, geo helpers), since these run
+  on every request and silently wrong caching would be hard to notice without a test forcing the TTL boundary.
+- **Airport resolution** (`resolveAirports.test.ts`) — covers IATA lookup, city/region alias expansion, and the
+  case-insensitive fallback search, because this logic sits ahead of every tool call and a bad match silently
+  answers the wrong airport.
+- **Agent wiring** (`agent.test.ts`, `streamAgent.test.ts`, `runEvidence.test.ts`, `focusAirports.test.ts`) — uses
+  a fake chat model (never the real Groq API, per the hard rule) to test that tool calls, evidence extraction, and
+  streaming events assemble correctly, and that conversation memory persists across turns via `thread_id`. This
+  tests the LangGraph plumbing itself, not model behavior, which is what makes it fast and deterministic.
+- **Resilience** (`rateLimit.test.ts`) — unit-tests the 429-detection and backoff-delay math behind
+  `withRateLimitRetry` (section 2) in isolation from any network call, since that's the part most likely to
+  regress silently and only surface as flakiness under real rate-limit pressure.
+
+**Why this split matters:** the scoring/data tests are regular correctness tests — they'd fail the same way any
+bug does. The agent tests exist for a narrower reason: they guard the *shape* of the LangGraph integration
+(middleware ordering, artifact extraction, streaming events, memory) so that a refactor of `run.ts` or the
+middleware chain can't silently break evidence or memory without a real Groq call ever running — something an
+LLM-in-the-loop eval would be too slow, flaky, and costly to run on every change.
+
+## 8. Future work
 
 - BTS T-100 load factors and on-time performance history for a real historical delay rate (vs. the live NAS
   snapshot).

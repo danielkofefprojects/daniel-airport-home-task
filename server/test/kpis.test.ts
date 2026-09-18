@@ -56,11 +56,19 @@ describe("growthCagr", () => {
   it("returns undefined without a base year", () => {
     expect(growthCagr(airport({ enplanements: { "2024": 15_000_000 } }))).toBeUndefined();
   });
+
+  it("returns undefined when the latest year is not after the base year", () => {
+    expect(growthCagr(airport({ enplanements: { "2019": 10_000_000 } }))).toBeUndefined();
+  });
 });
 
 describe("recoveryRatio", () => {
   it("matches the hand-computed worked example (15M / 10M = 1.5)", () => {
     expect(recoveryRatio(airport())).toBeCloseTo(1.5, 10);
+  });
+
+  it("returns undefined without a base year", () => {
+    expect(recoveryRatio(airport({ enplanements: { "2024": 15_000_000 } }))).toBeUndefined();
   });
 });
 
@@ -80,6 +88,13 @@ describe("paxPerRunway", () => {
 describe("opsPerRunway", () => {
   it("divides daily ops by active runway count", () => {
     expect(opsPerRunway(100, airport())).toBe(50);
+  });
+
+  it("returns undefined with zero active runways", () => {
+    const closedOnly = airport({
+      runways: [{ lengthFt: 10000, surface: "ASP", closed: true }]
+    });
+    expect(opsPerRunway(100, closedOnly)).toBeUndefined();
   });
 });
 
