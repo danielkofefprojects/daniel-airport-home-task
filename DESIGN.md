@@ -101,8 +101,13 @@ output — so a user can verify any number against its source without trusting t
   not a trend.
 - **Groq free tier token limits** — drove compact (~1,500 token) tool outputs and history trimming middleware,
   at some cost to how much conversational context the model sees.
-- **Seed data fallback** — guarantees an offline-capable demo at the cost of freshness; every response that used
-  seed/cache data says so via `caveats` and a downgraded confidence.
+- **Seed data has two distinct roles, not just one.** For OurAirports/FAA enplanements, seed is a *failure
+  fallback*: those are fetched live on every query and only replaced by the bundled seed if the live call fails
+  or `USE_SEED_ONLY=true`, guaranteeing an offline-capable demo at the cost of freshness — flagged via `caveats`
+  and a downgraded confidence. For OpenSky flight-sample percentiles, seed is the *only* path: OpenSky requires
+  an OAuth token round-trip and is rate-limited, so fetching live for all ~60 peer airports on every user query
+  isn't viable. Instead `scripts/build-seed.ts` fetches and summarizes flight samples once, offline, and
+  `flightStats` is always read from that precomputed snapshot at request time — never fetched live per query.
 - **`createAgent` vs. a custom LangGraph `StateGraph`** — much less code and faster to build for six
   independent tools; a custom graph (e.g. research → score → write memo) is the natural next step if the
   workflow grows multi-stage, and the existing tools would move over unchanged.
